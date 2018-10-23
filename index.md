@@ -615,9 +615,6 @@ file:
 
 ## References
 
-* [The Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
-* [The Swift Programming Language](https://developer.apple.com/library/prerelease/ios/documentation/swift/conceptual/swift_programming_language/index.html)
-* [Using Swift with Cocoa and Objective-C](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/index.html)
-* [Swift Standard Library Reference](https://developer.apple.com/library/prerelease/ios/documentation/General/Reference/SwiftStandardLibraryReference/index.html)
-* [The Official raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide)
-* [SwiftLint rules list](https://github.com/realm/SwiftLint/blob/master/Rules.md)
+* [Java Style Guidelines (Draft, v6)](https://google.github.io/styleguide/javaguide.html)
+* [Twitter Java Style Guide](https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md)
+* [Code Conventions for the Java TM Programming Language](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)
