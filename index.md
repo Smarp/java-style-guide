@@ -32,7 +32,7 @@ ImageView imageViewProfileAvatar
 ImageView imageViewLogo
 URL urlProfileAvatar
 RecyclerView recyclerViewShareHistory
-
+...
 ```
 
 ```diff
@@ -57,6 +57,37 @@ Use the whole name of the object
 + Preferred: Short, concise and descriptive
 ```
 ```Java
+HashMap<Class|Primitive, Class|Primitive> hashMap;
+Map<Class|Primitive, Class|Primitive> map;
+Set<Class|Primitive> set;
+LinkedList<Class|Primitive> linkedList;
+ArrayList<Class|Primitive> arrayList;
+List<CommentItem> listCommentItem; // Custom class example
+List<Class|Primitive> list;
+SQLiteHelper sqliteHelper;
+Cursor cursor;
+...
+```
+
+```diff
+- Not Preferred
+```
+```Java
+HashMap<String, Integer> socnetShared;
+List<String> twitterCommentSet;
+HashMap<Integer, Fragment> mPageReferenceMap;
+ArrayList<Object> channelList;
+List<CommentItem> comments;
+List<String> CommentSet;
+```
+
+## Naming several time used storing structure objects inside business layers
+
+Use the whole name of the object
+```diff
++ Preferred: Short, concise and descriptive
+```
+```Java
 HashMap<Object, Object> hashMap;
 HashMap<Object, Object> hashMapPageReference;
 Map<Object, Object> map;
@@ -75,12 +106,13 @@ Cursor cursor;
 ```
 ```Java
 HashMap<String, Integer> socnetShared;
-List<String> twitterCommentSet;
 HashMap<Integer, Fragment> mPageReferenceMap;
-ArrayList<Object> channelList;
+List<String> twitterCommentSet;
 List<CommentItem> comments;
 List<String> CommentSet;
+ArrayList<Object> channelList;
 ```
+
 
 ## References
 
