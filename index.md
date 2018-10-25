@@ -47,6 +47,7 @@ InputMethodManager imm;
 LinearLayout passwordBlocked;
 TextMuseo errorText;
 ImageButton xButton;
+IconButton mBtnCheckBox;
 ```
 
 ## Naming one time used storing structure objects inside business layers
