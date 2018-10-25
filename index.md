@@ -11,102 +11,74 @@ Strive to make your code compile without warnings. This rule informs many style 
 
 Descriptive and consistent naming makes software easier to read and understand. 
 
-**Clarity at the point of use** is your most important goal. Entities such as methods and properties are declared only once but used repeatedly. Design APIs to make those uses clear and concise.
+**Clarity at the point of use** is your most important goal. Entities such as methods and properties are declared only once but used repeatedly. Design APIs to make those uses clear and concise and consistent.
 
 **Clarity is more important than brevity.** Although Java code can be compact, it is a non-goal to enable the smallest possible code with the fewest characters. Brevity in Java code, where it occurs, is a side-effect of the strong type system and features that naturally reduce boilerplate.
 
-
 Use the Java naming conventions described in the [Java Style Guide](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html).
 
-
-<details>
-<summary>JavaLint</summary>
-
-```code
- - type_name
- - identifier_name
- ```
-
-</details>
-
-
-## Naming UI elements (IBOutlet)
+## Naming UI elements
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
 ```diff
-+ Preferred
++ Preferred: Short, concise and descriptive
 ```
-```swift
-@IBOutlet weak var labelEmailHint: UILabel!
-@IBOutlet weak var navigationBar: UINavigationBar!
-@IBOutlet weak var postAuthorViewCreator: PostAuthorView!
-
-```
-
-```diff
-- Not Preferred
-```
-```swift
-@IBOutlet weak var lblEmailHint: UILabel!
-@IBOutlet weak var emailHintTextField: UILabel!
-@IBOutlet weak var emailHint: UILabel!
-
-```
-
-## Naming views that extend UI elements
-
-Use a descriptive name followed by the ui view without the UI prefix
-
-```diff
-+ Preferred
-```
-```swift
-class PostAuthorView: UIView {
+```Android UI Elements
+TextView textViewFirstName
+TextView textViewLastName
+Button buttonShareToFacebook
+Button buttonShareToTwitter
+ImageView imageViewProfileAvatar
+ImageView imageViewLogo
+URL urlProfileAvatar
+RecyclerView recyclerViewShareHistory
 
 ```
 
 ```diff
 - Not Preferred
 ```
-```swift
-class ViewPostAuthor: UIView {
-class PostAuthor: UIView {
-class UIViewPostAuthor: UIView {
-class PostAuthorUIView: UIView {
+```Android UI Elements
+LinearLayout googleButton;
+LinearLayout linkedInButton;
+ButtonMuseo loginButtonPassword;
+TextMuseo invalidPasswordHint;
+InputMethodManager imm;
+LinearLayout passwordBlocked;
+TextMuseo errorText;
+ImageButton xButton;
+```
+
+## Naming one time used storing structure objects inside business layers
+
+Use the whole name of the object
+```diff
++ Preferred: Short, concise and descriptive
+```
+```Java
+HashMap<Object, Object> hashMap;
+HashMap<Object, Object> hashMapPageReference;
+Map<Object, Object> map;
+Set<Object> set;
+LinkedList<Object> linkedList;
+ArrayList<Object> arrayListChannel;
+List<CommentItem> listComment;
+List<String> listComment;
+SQLiteHelper sqliteHelper;
+Cursor cursor;
 
 ```
 
-## Where to put code
-
-#### Groups and file names
-
-```code
-
-|-- models
-|   |-- model1
-|   |   |-- Post.swift
-|   |   |-- Tag.swift
-|   |   |-- Socnet.swift
-|   |    `-- noarm.swift´
-|-- pages
-|   |-- page1
-|   |   |-- Screen1
-|   |   |   |-- Screen1ViewController.swift
-|   |   |   |-- Screen1Controller.swift
-|   |   |   |-- Screen1TableViewCell.swift
-|   |   |   `-- Screen1OtherSpecificThing.swift
-`-- utils
-    |-- extensions
-    |-- |-- ClassName1+UtilMethods.swift
-    |-- |-- ClassName2+Helps.swift
-    |-- commonThing1
-    |   |-- Art.swift
-    |   |-- Magic.swift
-    |   `-- Good.swift
-    `-- commonThing2
-        |-- Power.swift
-        `-- Fast.swift
-
+```diff
+- Not Preferred
+```
+```Java
+HashMap<String, Integer> socnetShared;
+List<String> twitterCommentSet;
+HashMap<Integer, Fragment> mPageReferenceMap;
+ArrayList<Object> channelList;
+List<CommentItem> comments;
+List<String> CommentSet;
 ```
 
 #### Protocols
