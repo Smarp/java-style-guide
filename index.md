@@ -34,6 +34,96 @@ Tool support is nice, but ultimately each IDE and style checking tool can handle
 
 Use the Java naming conventions described in the [Java Style Guide Naming](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html#toc-naming).
 
+## Naming packages
+
+Package names should be all lower case without underscores or other special characters.
+Don’t use plural form. Follow the convention of the standard API which uses for instance `java.lang.annotation` and not `java.lang.annotations`.
+
+```diff
++ Preferred: follow the convention of standard java API
+```
+```java
+java.lang.annotation
+```
+
+```diff
+- Not Preferred
+```
+```java
+java.lang.annotations
+```
+
+## Class, Interface and Enum Names
+
+Class and enum names should typically be nouns.
+Interface names should typically be nouns or adjectives ending with …able.
+Use mixed case with the first letter in each word in upper case.
+Use whole words and avoid using abbreviations unless the abbreviation is more widely used than the long form.
+Format an abbreviation as a word if the it is part of a longer class name.
+
+```diff
++ Preferred: follow the convention of standard java API
+```
+```java
+class EmptyCell
+class RunningMode
+interface Expandable
+class XmlParser
+```
+
+```diff
+- Not Preferred
+```
+```java
+class Empty
+class Running
+class Expandable
+class XMLParser // Abbreviation should be formatted as 'Xml'
+```
+
+## Method Names
+
+Method names should typically be verbs or other descriptions of actions.
+Use mixed case with the first letter in lower case.(Camel Case)
+
+```diff
++ Preferred: Short, concise and descriptive
+```
+```java
+public void expand()
+public boolean isExpanding()
+public State getState()
+```
+
+```diff
+- Not Preferred
+```
+```java
+public boolean expanding()
+public State GetState()
+public int get_index()
+```
+
+## Variables
+
+Variable names should be in mixed case with the first letter in lower case.
+
+```diff
++ Preferred: Short, concise and descriptive
+```
+```java
+int currentIndex;
+boolean dataAvailable;
+```
+
+```diff
+- Not Preferred
+```
+```java
+int current_index;
+boolean DataAvailable;
+```
+
 ## Naming UI elements
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
@@ -102,7 +192,7 @@ List<String> CommentSet;
 
 ## Naming several time used data dictionary objects inside business layers
 
-Use the whole name of the object
+Use the whole name of the object and append it with usage purpose.
 
 ```diff
 + Preferred: Short, concise and descriptive
@@ -138,7 +228,7 @@ Example template of test method signatures is
 *test*`WhatYouAreTesting`*Should*`WhatIsExpected`
 
 ```diff
-+ Preferred: test+WhatYouAreTesting+Should+WhatIsExpected
++ Preferred: "test"+WhatYouAreTesting+"Should"+WhatIsExpected
 ```
 ```Java
 testClickApproveButtonShouldChangeUIToApprove();
@@ -150,7 +240,27 @@ testClickApproveButtonShouldChangeUIToApprove();
 ```
 ```Java
 testFirstLeaderBoardMustBeCalled();
+```
 
+## Redundant Parentheses
+
+Variable names shoRedundant grouping parentheses (i.e. parentheses that does not affect evaluation) may be used if they improve readability.
+Redundant grouping parentheses should typically be left out in shorter expressions involving common operators but included in longer expressions or expressions involving operators whose precedence and associativity is unclear without parentheses. Ternary expressions with non-trivial conditions belong to the latter.
+The entire expression following a return keyword must not be surrounded by parentheses.
+
+```diff
++ Preferred: Short, concise and descriptive
+```
+```java
+return flag ? "yes" : "no";
+String cmp = (flag1 != flag2) ? "not equal" : "equal";
+```
+
+```diff
+- Not Preferred
+```
+```java
+return (flag ? "yes" : "no");
 ```
 
 
