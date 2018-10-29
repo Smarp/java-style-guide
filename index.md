@@ -142,7 +142,6 @@ Example template of test method signatures is
 ```
 ```Java
 testClickApproveButtonShouldChangeUIToApprove();
-testClickApproveButtonShouldChangeUIToApprove();
 
 ```
 
@@ -150,12 +149,8 @@ testClickApproveButtonShouldChangeUIToApprove();
 - Not Preferred
 ```
 ```Java
-HashMap<String, Integer> socnetShared;
-HashMap<Integer, Fragment> mPageReferenceMap;
-List<String> twitterCommentSet;
-List<CommentItem> comments;
-List<String> CommentSet;
-ArrayList<Object> channelList;
+testFirstLeaderBoardMustBeCalled();
+
 ```
 
 
