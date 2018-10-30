@@ -38,8 +38,10 @@ Use the Java naming conventions described in the [Java Style Guide Naming](http:
 
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - PackageName
+ 
 </details>
 
 Package names should be all lower case without underscores or other special characters.
@@ -64,9 +66,11 @@ com.example.deep_space
 ## Class, Interface and Enum Names
 
 <details>
-<summary>JavaLint</summary>
-  * ClassTypeParameterName
-  * InterfaceTypeParameterName
+<summary>checkstyle</summary>
+ 
+  - ClassTypeParameterName
+  - InterfaceTypeParameterName
+  
 </details>
 
 Class and enum names should typically be nouns.
@@ -98,10 +102,12 @@ class BtnAwesome // Abreviation of button
 ## Instance variables
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - LocalVariableName
  - MemberName
  - TypeName
+ 
 </details>
 
 Lower camel case
@@ -123,8 +129,10 @@ newCustomerID
 ## Method Names
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - MethodName
+ 
 </details>
 
 Method names should typically be verbs or other descriptions of actions.
@@ -150,8 +158,10 @@ public int get_index()
 ## Constant names
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - ConstantName
+ 
 </details>
 
 All in uppercase
@@ -176,9 +186,11 @@ String SERVERName
 ## Parameters and local variables
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - LocalVariableName
  - ParameterName
+ 
 </details>
 
 Variable names should be in mixed case with the first letter in lower case.
@@ -202,8 +214,10 @@ boolean DataAvailable;
 ## Naming UI elements
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - AbbreviationAsWordInName
+ 
 </details>
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
@@ -241,9 +255,11 @@ IconButton mBtnCheckBox;
 ## Naming several time used data dictionary objects inside business layers
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - MemberName
  - AbbreviationAsWordInName
+ 
 </details>
 
 Use the whole name of the object and append it with usage purpose.
@@ -279,8 +295,10 @@ ArrayList<Object> channelList;
 ## Naming test methods
 
 <details>
-<summary>JavaLint</summary>
+<summary>checkstyle</summary>
+ 
  - MethodName
+ 
 </details>
 
 Example template of test method signatures is 
