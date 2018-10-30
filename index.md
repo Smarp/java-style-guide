@@ -65,8 +65,8 @@ com.example.deep_space
 
 <details>
 <summary>JavaLint</summary>
-  - ClassTypeParameterName
-  - InterfaceTypeParameterName
+  * ClassTypeParameterName
+  * InterfaceTypeParameterName
 </details>
 
 Class and enum names should typically be nouns.
