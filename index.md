@@ -68,6 +68,7 @@ Use whole words and avoid using abbreviations. Format an abbreviation as a word 
 ```java
 class EmptyCell
 class RunningMode
+class 
 interface Expandable
 class XmlParser
 enum ServerResponse
@@ -77,10 +78,10 @@ enum ServerResponse
 - Not Preferred
 ```
 ```java
-class Empty
-class Running
-class Expandable
+class Empty  // Too generic
+class Running // Not a noum
 class XMLParser // Abbreviation should be formatted as 'Xml'
+class BtnAwesome // Abreviation of button
 ```
 
 ## Method Names
@@ -105,8 +106,29 @@ public boolean expanding()
 public State GetState()
 public int get_index()
 ```
+## Constant names
 
-## Variables
+All in uppercase
+
+```diff
++ Preferred: All in upper case, using underline is not prohobited
+```
+```Java
+String SERVER_NAME
+String SOCNET_TYPE
+```
+
+```diff
+- Not Preferred
+```
+```Java
+String Server_Name
+String SOCNETTYPE
+String SERVERName
+```
+
+
+## Parameters and local variables
 
 Variable names should be in mixed case with the first letter in lower case.
 
@@ -158,38 +180,6 @@ LinearLayout passwordBlocked;
 TextMuseo errorText;
 ImageButton xButton;
 IconButton mBtnCheckBox;
-```
-
-## Naming one time used data dictionary objects inside business layers
-
-Use the whole name of the object
-
-```diff
-+ Preferred: Short, concise and descriptive
-```
-```Java
-HashMap<Class|Primitive, Class|Primitive> hashMap;
-Map<Class|Primitive, Class|Primitive> map;
-Set<Class|Primitive> set;
-LinkedList<Class|Primitive> linkedList;
-ArrayList<Class|Primitive> arrayList;
-List<CommentItem> listCommentItem; // Custom class example
-List<Class|Primitive> list;
-SQLiteHelper sqliteHelper;
-Cursor cursor;
-...
-```
-
-```diff
-- Not Preferred
-```
-```Java
-HashMap<String, Integer> socnetShared;
-List<String> twitterCommentSet;
-HashMap<Integer, Fragment> mPageReferenceMap;
-ArrayList<Object> channelList;
-List<CommentItem> comments;
-List<String> CommentSet;
 ```
 
 ## Naming several time used data dictionary objects inside business layers
