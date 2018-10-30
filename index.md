@@ -36,6 +36,16 @@ Use the Java naming conventions described in the [Java Style Guide Naming](http:
 
 ## Naming packages
 
+
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - PackageName
+ ```
+
+</details>
+
 Package names should be all lower case without underscores or other special characters.
 Don’t use plural form. Follow the convention of the standard API which uses for instance `java.lang.annotation` and not `java.lang.annotations`.
 
@@ -57,6 +67,16 @@ com.example.deep_space
 
 ## Class, Interface and Enum Names
 
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - ClassTypeParameterName
+ - InterfaceTypeParameterName
+ ```
+
+</details>
+
 Class and enum names should typically be nouns.
 Interface names should typically be nouns or adjectives ending with …able.
 Use mixed case with the first letter in each word in upper case.
@@ -68,7 +88,6 @@ Use whole words and avoid using abbreviations. Format an abbreviation as a word 
 ```java
 class EmptyCell
 class RunningMode
-class 
 interface Expandable
 class XmlParser
 enum ServerResponse
@@ -84,7 +103,45 @@ class XMLParser // Abbreviation should be formatted as 'Xml'
 class BtnAwesome // Abreviation of button
 ```
 
+## Instance variables
+
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - LocalVariableName
+ - MemberName
+ - TypeName
+```
+
+</details>
+
+Lower camel case
+
+```diff
++ Preferred: Short, concise and descriptive, lower camel case
+```
+```java
+newCustomerId
+```
+
+```diff
+- Not Preferred
+```
+```java
+newCustomerID
+```
+
 ## Method Names
+
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - MethodName
+ ```
+
+</details>
 
 Method names should typically be verbs or other descriptions of actions.
 Use mixed case with the first letter in lower case.(Camel Case)
@@ -108,6 +165,15 @@ public int get_index()
 ```
 ## Constant names
 
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - ConstantName
+ ```
+
+</details>
+
 All in uppercase
 
 ```diff
@@ -127,8 +193,17 @@ String SOCNETTYPE
 String SERVERName
 ```
 
-
 ## Parameters and local variables
+
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - LocalVariableName
+ - ParameterName
+ ```
+
+</details>
 
 Variable names should be in mixed case with the first letter in lower case.
 
@@ -149,6 +224,15 @@ boolean DataAvailable;
 ```
 
 ## Naming UI elements
+
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - AbbreviationAsWordInName
+ ```
+
+</details>
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
 
@@ -184,6 +268,16 @@ IconButton mBtnCheckBox;
 
 ## Naming several time used data dictionary objects inside business layers
 
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - MemberName
+ - AbbreviationAsWordInName
+ ```
+
+</details>
+
 Use the whole name of the object and append it with usage purpose.
 
 ```diff
@@ -215,6 +309,15 @@ List<String> CommentSet;
 ArrayList<Object> channelList;
 ```
 ## Naming test methods
+
+<details>
+<summary>JavaLint</summary>
+
+```code
+ - MethodName
+ ```
+
+</details>
 
 Example template of test method signatures is 
 *test*`WhatYouAreTesting`*Should*`WhatIsExpected`
@@ -261,3 +364,7 @@ return (flag ? "yes" : "no");
 * [Java Style Guidelines (Draft, v6)](https://google.github.io/styleguide/javaguide.html)
 * [Twitter Java Style Guide](https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md)
 * [Code Conventions for the Java TM Programming Language](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)
+* [Sourcefourge checkstyle](http://checkstyle.sourceforge.net/config_naming.html)
+
+
+
