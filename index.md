@@ -60,8 +60,7 @@ com.example.deep_space
 Class and enum names should typically be nouns.
 Interface names should typically be nouns or adjectives ending with …able.
 Use mixed case with the first letter in each word in upper case.
-Use whole words and avoid using abbreviations unless the abbreviation is more widely used than the long form.
-Format an abbreviation as a word if the it is part of a longer class name.
+Use whole words and avoid using abbreviations. Format an abbreviation as a word if the it is part of a longer class name.
 
 ```diff
 + Preferred: follow the convention of standard java API
