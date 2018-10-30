@@ -65,12 +65,8 @@ com.example.deep_space
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - ClassTypeParameterName
  - InterfaceTypeParameterName
-```
-
 </details>
 
 Class and enum names should typically be nouns.
@@ -103,13 +99,9 @@ class BtnAwesome // Abreviation of button
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - LocalVariableName
  - MemberName
  - TypeName
-```
-
 </details>
 
 Lower camel case
@@ -132,11 +124,7 @@ newCustomerID
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - MethodName
-```
-
 </details>
 
 Method names should typically be verbs or other descriptions of actions.
@@ -163,11 +151,7 @@ public int get_index()
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - ConstantName
- ```
-
 </details>
 
 All in uppercase
@@ -193,12 +177,8 @@ String SERVERName
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - LocalVariableName
  - ParameterName
- ```
-
 </details>
 
 Variable names should be in mixed case with the first letter in lower case.
@@ -223,11 +203,7 @@ boolean DataAvailable;
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - AbbreviationAsWordInName
- ```
-
 </details>
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
@@ -266,12 +242,8 @@ IconButton mBtnCheckBox;
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - MemberName
  - AbbreviationAsWordInName
- ```
-
 </details>
 
 Use the whole name of the object and append it with usage purpose.
@@ -308,11 +280,7 @@ ArrayList<Object> channelList;
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - MethodName
- ```
-
 </details>
 
 Example template of test method signatures is 
