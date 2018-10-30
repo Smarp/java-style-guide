@@ -70,6 +70,7 @@ class EmptyCell
 class RunningMode
 interface Expandable
 class XmlParser
+enum ServerResponse
 ```
 
 ```diff
