@@ -42,7 +42,7 @@ Use the Java naming conventions described in the [Java Style Guide Naming](http:
 
 ```code
  - PackageName
- ```
+```
 
 </details>
 
@@ -73,7 +73,7 @@ com.example.deep_space
 ```code
  - ClassTypeParameterName
  - InterfaceTypeParameterName
- ```
+```
 
 </details>
 
@@ -139,7 +139,7 @@ newCustomerID
 
 ```code
  - MethodName
- ```
+```
 
 </details>
 
