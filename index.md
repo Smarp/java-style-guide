@@ -51,6 +51,8 @@ java.lang.annotation
 ```
 ```java
 java.lang.annotations
+com.example.deepSpace
+com.example.deep_space
 ```
 
 ## Class, Interface and Enum Names
