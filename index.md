@@ -39,11 +39,7 @@ Use the Java naming conventions described in the [Java Style Guide Naming](http:
 
 <details>
 <summary>JavaLint</summary>
-
-```code
  - PackageName
-```
-
 </details>
 
 Package names should be all lower case without underscores or other special characters.
