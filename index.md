@@ -1,21 +1,15 @@
 
 # Java Style Guide for Smarp mobile projects.
 
-
-## Correctness
-
-Strive to make your code compile without warnings. This rule informs many style decisions.
-
-
 ## Introduction
-
-This is a set of style guidelines for JDK Release Projects in the OpenJDK Community.
-
-## Motivation
 
 Code that looks familiar is easier to understand and therefore also easier to review, debug and maintain. To ensure that code looks familiar to all developers on the project it’s important to agree on a common set of style guidelines.
 
 This document provides guidelines for low level coding practices such as how to indent code and how to name types and variables. Many of the stylistic choices are subjective and different developers may have different opinions about them. Keep in mind however, that having a consistent style is more important than to satisfy each individual developers preference.
+
+## Correctness
+
+Strive to make your code compile without warnings. This rule informs many style decisions.
 
 ## Guiding Principles
 
@@ -28,21 +22,14 @@ The guidelines in this document strive to maximize,
 5. Consistency
 6. Aesthetics
 
-While this document covers a lot of ground, it should be noted that no style guide can answer all questions for us, and developers will always need to use good judgment towards the end of producing code that is correct, readable, maintainable, debuggable, consistently formatted, and aesthetically pleasing.
-
-Tool support is nice, but ultimately each IDE and style checking tool can handle different sets of rules, and support for rules that can’t be handled today might be added in future versions. So, whether a rule plays well with tools or not can be a factor, but it’s secondary to the above principles.
+While this document covers a lot of ground, it should be noted that no style guide or lint tool can answer all questions for us, and developers will always need to use good judgment towards the end of producing quality code.
 
 Use the Java naming conventions described in the [Java Style Guide Naming](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html#toc-naming).
 
-## Naming packages
+## About naming
 
 
-<details>
-<summary>checkstyle</summary>
- 
- - PackageName
- 
-</details>
+### Package
 
 Package names should be all lower case without underscores or other special characters.
 Don’t use plural form. Follow the convention of the standard API which uses for instance `java.lang.annotation` and not `java.lang.annotations`.
@@ -62,16 +49,15 @@ java.lang.annotations
 com.example.deepSpace
 com.example.deep_space
 ```
-
-## Class, Interface and Enum Names
-
 <details>
 <summary>checkstyle</summary>
  
-  - ClassTypeParameterName
-  - InterfaceTypeParameterName
-  
+ - PackageName
+ 
 </details>
+
+
+### Class, Interface and Enum
 
 Class and enum names should typically be nouns.
 Interface names should typically be nouns or adjectives ending with …able.
@@ -98,42 +84,15 @@ class Running // Not a noum
 class XMLParser // Abbreviation should be formatted as 'Xml'
 class BtnAwesome // Abreviation of button
 ```
-
-## Instance variables
-
 <details>
 <summary>checkstyle</summary>
  
- - LocalVariableName
- - MemberName
- - TypeName
- 
+  - ClassTypeParameterName
+  - InterfaceTypeParameterName
+  
 </details>
 
-Lower camel case
-
-```diff
-+ Preferred: Short, concise and descriptive, lower camel case
-```
-```java
-newCustomerId
-```
-
-```diff
-- Not Preferred
-```
-```java
-newCustomerID
-```
-
-## Method Names
-
-<details>
-<summary>checkstyle</summary>
- 
- - MethodName
- 
-</details>
+### Methods
 
 Method names should typically be verbs or other descriptions of actions.
 Use mixed case with the first letter in lower case.(Camel Case)
@@ -155,14 +114,15 @@ public boolean expanding()
 public State GetState()
 public int get_index()
 ```
-## Constant names
 
 <details>
 <summary>checkstyle</summary>
  
- - ConstantName
+ - MethodName
  
 </details>
+
+### Constants
 
 All in uppercase
 
@@ -183,24 +143,24 @@ String SOCNETTYPE
 String SERVERName
 ```
 
-## Parameters and local variables
-
 <details>
 <summary>checkstyle</summary>
  
- - LocalVariableName
- - ParameterName
+ - ConstantName
  
 </details>
+
+### Parameters and local variables
 
 Variable names should be in mixed case with the first letter in lower case.
 
 ```diff
-+ Preferred: Short, concise and descriptive
++ Preferred: Short, concise and descriptive, lower camel case
 ```
 ```java
 int currentIndex;
 boolean dataAvailable;
+String newCustomerId
 ```
 
 ```diff
@@ -209,16 +169,21 @@ boolean dataAvailable;
 ```java
 int current_index;
 boolean DataAvailable;
-```
+String newCustomerID;
 
-## Naming UI elements
+```
 
 <details>
 <summary>checkstyle</summary>
  
- - AbbreviationAsWordInName
+ - LocalVariableName
+ - ParameterName
+ - MemberName
+ - TypeName
  
 </details>
+
+## Naming UI elements
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
 
@@ -252,15 +217,14 @@ ImageButton xButton;
 IconButton mBtnCheckBox;
 ```
 
-## Naming several time used data dictionary objects inside business layers
-
 <details>
 <summary>checkstyle</summary>
  
- - MemberName
  - AbbreviationAsWordInName
  
 </details>
+
+### Data dictionary objects inside business layers
 
 Use the whole name of the object and append it with usage purpose.
 
@@ -292,14 +256,16 @@ List<CommentItem> comments;
 List<String> CommentSet;
 ArrayList<Object> channelList;
 ```
-## Naming test methods
 
 <details>
 <summary>checkstyle</summary>
  
- - MethodName
+ - MemberName
+ - AbbreviationAsWordInName
  
 </details>
+
+### Test methods
 
 Example template of test method signatures is 
 *test*`WhatYouAreTesting`*Should*`WhatIsExpected`
@@ -318,6 +284,13 @@ testClickApproveButtonShouldChangeUIToApprove();
 ```Java
 testFirstLeaderBoardMustBeCalled();
 ```
+
+<details>
+<summary>checkstyle</summary>
+ 
+ - MethodName
+ 
+</details>
 
 ## Redundant Parentheses
 
