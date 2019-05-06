@@ -300,7 +300,42 @@ String cmp = (flag1 != flag2) ? "not equal" : "equal";
 ```java
 return (flag ? "yes" : "no");
 ```
+## Where to put code
 
+#### Packages and file names
+
+```code
+
+|-- data
+|   |-- repositories
+|   |   |-- LikeRepository.java
+|   |   |-- LikeRepositoryInterface.java
+|   |   `-- LikeSendCallback.java
+|   |-- local
+|   |   |-- PermanentStorage.java
+|   |   `-- MemoryStorage.java
+|   |-- remote
+|   |    `-- Server.java
+|   `-- DataProviderInterface.java
+|-- domain
+|   |-- entities
+|   |   |-- Bookmark.java
+|   |   `-- Like.java
+|    `-- usecases
+|       |-- LikeUseCases.java
+|       `-- LikeUseCasesInterface.java
+`-- presentation
+    |-- navigation
+    |   `-- Navigator.java
+     `-- channelSubscription
+        |-- ChannelSubscriptionActivity.java
+        |-- ChannelSubscriptionActivityInterface.java
+        |-- ChannelSubscriptionActivityPresenter.java
+        |-- ChannelSubscriptionActivityPresenterInterface.java
+        `-- SelectedItemChangedCallback.java
+
+
+```
 
 ## References
 
