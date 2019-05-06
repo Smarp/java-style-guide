@@ -7,26 +7,13 @@ Code that looks familiar is easier to understand and therefore also easier to re
 
 This document provides guidelines for low level coding practices such as how to indent code and how to name types and variables. Many of the stylistic choices are subjective and different developers may have different opinions about them. Keep in mind however, that having a consistent style is more important than to satisfy each individual developers preference.
 
-## Correctness
+## Guiding Principles
 
 Strive to make your code compile without warnings. This rule informs many style decisions.
 
-## Guiding Principles
-
-The guidelines in this document strive to maximize,
-
-1. Correctness
-2. Readability
-3. Maintainability
-4. Debuggability
-5. Consistency
-6. Aesthetics
-
-While this document covers a lot of ground, it should be noted that no style guide or lint tool can answer all questions for us, and developers will always need to use good judgment towards the end of producing quality code.
-
 Use the Java naming conventions described in the [Java Style Guide Naming](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html#toc-naming).
 
-## About naming
+## How to name
 
 
 ### Package
@@ -183,7 +170,7 @@ String newCustomerID;
  
 </details>
 
-## Naming UI elements
+### UI elements
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
 
@@ -224,7 +211,7 @@ IconButton mBtnCheckBox;
  
 </details>
 
-### Data dictionary objects inside business layers
+### Data dictionary objects
 
 Use the whole name of the object and append it with usage purpose.
 
@@ -271,10 +258,11 @@ Example template of test method signatures is
 *test*`WhatYouAreTesting`*Should*`WhatIsExpected`
 
 ```diff
-+ Preferred: "test"+WhatYouAreTesting+"Should"+WhatIsExpected
++ Preferred: "test"+WhatYouAreTesting+OptionalCondition+"Should"+WhatIsExpected
 ```
 ```Java
 testClickApproveButtonShouldChangeUIToApprove();
+testClickApproveButtonWithNoInternetShouldChangeUIToApprove();
 
 ```
 
@@ -292,7 +280,7 @@ testFirstLeaderBoardMustBeCalled();
  
 </details>
 
-## Redundant Parentheses
+### Redundant Parentheses
 
 Variable names shoRedundant grouping parentheses (i.e. parentheses that does not affect evaluation) may be used if they improve readability.
 Redundant grouping parentheses should typically be left out in shorter expressions involving common operators but included in longer expressions or expressions involving operators whose precedence and associativity is unclear without parentheses. Ternary expressions with non-trivial conditions belong to the latter.
