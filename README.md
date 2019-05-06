@@ -13,10 +13,66 @@ Strive to make your code compile without warnings. This rule informs many style 
 
 Use the Java naming conventions described in the [Java Style Guide Naming](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html#toc-naming).
 
+## Where to put code
+
+#### Packages and file names
+
+```code
+
+|-- data
+|   |-- repositories
+|   |   |-- LikeRepository.java
+|   |   |-- LikeRepositoryInterface.java
+|   |   `-- LikeSendCallback.java
+|   |-- local
+|   |   |-- PermanentStorage.java
+|   |   `-- MemoryStorage.java
+|   |-- remote
+|   |    `-- Server.java
+|   `-- DataProviderInterface.java
+|-- domain
+|   |-- entities
+|   |   |-- Bookmark.java
+|   |   `-- Like.java
+|    `-- usecases
+|       |-- LikeUseCases.java
+|       `-- LikeUseCasesInterface.java
+`-- presentation
+    |-- navigation
+    |   `-- Navigator.java
+     `-- channelSubscription
+        |-- ChannelSubscriptionActivity.java
+        |-- ChannelSubscriptionActivityInterface.java
+        |-- ChannelSubscriptionActivityPresenter.java
+        |-- ChannelSubscriptionActivityPresenterInterface.java
+        `-- SelectedItemChangedCallback.java
+
+```
+
 ## How to name
 
+#### Presenter methods called by the view
+onInit()   
+onButtonClicked()   
+onTextChanged()   
+onSearchTriggered()   
+onDataChanged()   
+onQueryChanged()   
 
-### Package
+#### View methods called by the presenter
+init/setUp()   
+findViews()   
+setUIElementColor()   
+setUIElementText()   
+setUIElementClickListener()   
+navigateToNextScreen()   
+showUIElement()   
+hideUIElement()   
+enableUIElement()   
+disableUIElement()   
+
+
+#### Package
 
 Package names should be all lower case without underscores or other special characters.
 Don’t use plural form. Follow the convention of the standard API which uses for instance `java.lang.annotation` and not `java.lang.annotations`.
@@ -44,7 +100,7 @@ com.example.deep_space
 </details>
 
 
-### Class, Interface and Enum
+#### Class, Interface and Enum
 
 Class and enum names should typically be nouns.
 Interface names should typically be nouns or adjectives ending with …able.
@@ -79,7 +135,7 @@ class BtnAwesome // Abreviation of button
   
 </details>
 
-### Methods
+#### Methods
 
 Method names should typically be verbs or other descriptions of actions.
 Use mixed case with the first letter in lower case.(Camel Case)
@@ -109,7 +165,7 @@ public int get_index()
  
 </details>
 
-### Constants
+#### Constants
 
 All in uppercase
 
@@ -137,7 +193,7 @@ String SERVERName
  
 </details>
 
-### Parameters and local variables
+#### Parameters and local variables
 
 Variable names should be in mixed case with the first letter in lower case.
 
@@ -170,7 +226,7 @@ String newCustomerID;
  
 </details>
 
-### UI elements
+#### UI elements
 
 Use the whole name of the element without the UI prefix. After that it can be followed by a description
 
@@ -211,7 +267,7 @@ IconButton mBtnCheckBox;
  
 </details>
 
-### Data dictionary objects
+#### Data dictionary objects
 
 Use the whole name of the object and append it with usage purpose.
 
@@ -252,7 +308,7 @@ ArrayList<Object> channelList;
  
 </details>
 
-### Test methods
+#### Test methods
 
 Example template of test method signatures is 
 *test*`WhatYouAreTesting`*Should*`WhatIsExpected`
@@ -280,7 +336,7 @@ testFirstLeaderBoardMustBeCalled();
  
 </details>
 
-### Redundant Parentheses
+#### Redundant Parentheses
 
 Variable names shoRedundant grouping parentheses (i.e. parentheses that does not affect evaluation) may be used if they improve readability.
 Redundant grouping parentheses should typically be left out in shorter expressions involving common operators but included in longer expressions or expressions involving operators whose precedence and associativity is unclear without parentheses. Ternary expressions with non-trivial conditions belong to the latter.
@@ -300,42 +356,7 @@ String cmp = (flag1 != flag2) ? "not equal" : "equal";
 ```java
 return (flag ? "yes" : "no");
 ```
-## Where to put code
 
-#### Packages and file names
-
-```code
-
-|-- data
-|   |-- repositories
-|   |   |-- LikeRepository.java
-|   |   |-- LikeRepositoryInterface.java
-|   |   `-- LikeSendCallback.java
-|   |-- local
-|   |   |-- PermanentStorage.java
-|   |   `-- MemoryStorage.java
-|   |-- remote
-|   |    `-- Server.java
-|   `-- DataProviderInterface.java
-|-- domain
-|   |-- entities
-|   |   |-- Bookmark.java
-|   |   `-- Like.java
-|    `-- usecases
-|       |-- LikeUseCases.java
-|       `-- LikeUseCasesInterface.java
-`-- presentation
-    |-- navigation
-    |   `-- Navigator.java
-     `-- channelSubscription
-        |-- ChannelSubscriptionActivity.java
-        |-- ChannelSubscriptionActivityInterface.java
-        |-- ChannelSubscriptionActivityPresenter.java
-        |-- ChannelSubscriptionActivityPresenterInterface.java
-        `-- SelectedItemChangedCallback.java
-
-
-```
 
 ## References
 
