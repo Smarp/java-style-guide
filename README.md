@@ -22,8 +22,7 @@ Use the Java naming conventions described in the [Java Style Guide Naming](http:
 |-- data
 |   |-- repositories
 |   |   |-- LikeRepository.java
-|   |   |-- LikeRepositoryInterface.java
-|   |   `-- LikeSendCallback.java
+|   |   `-- LikeRepositoryInterface.java
 |   |-- local
 |   |   |-- PermanentStorage.java
 |   |   `-- MemoryStorage.java
@@ -35,6 +34,7 @@ Use the Java naming conventions described in the [Java Style Guide Naming](http:
 |   |   |-- Bookmark.java
 |   |   `-- Like.java
 |    `-- usecases
+|       |-- LikeSendCallback.java
 |       |-- LikeUseCases.java
 |       `-- LikeUseCasesInterface.java
 `-- presentation
